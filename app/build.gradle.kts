@@ -68,6 +68,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    // Google Fonts :->
+    implementation(libs.androidx.ui.text.google.fonts)
+
     // Navigation :->
     implementation(libs.androidx.navigation.compose)
     implementation(libs.kotlinx.serialization.json)

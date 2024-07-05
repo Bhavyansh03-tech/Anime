@@ -13,8 +13,7 @@ class MainActivity : ComponentActivity() {
 
         // Installing Splash Screen :->
         installSplashScreen(
-            // TODO after designing onboarding Screen
-
+            // TODO after designing onboarding Screen.
         )
 
         enableEdgeToEdge()
