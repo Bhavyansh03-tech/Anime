@@ -68,16 +68,24 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    // Navigation :->
-    implementation(libs.androidx.navigation.compose)
-    implementation(libs.kotlinx.serialization.json)
-
     // Dagger-Hilt :->
     implementation(libs.dagger.hilt)
     ksp(libs.dagger.hilt.compiler)
     ksp(libs.dagger.hilt.androidx)
     ksp(libs.hilt.android.compiler)
     implementation(libs.dagger.hilt.navigation.compose)
+
+    // Jetpack Compose Animation :->
+    implementation(libs.androidx.animation)
+    implementation(libs.androidx.animation.core)
+    implementation(libs.androidx.foundation)
+
+    // Navigation :->
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
+
+    // Coil Compose :->
+    implementation(libs.coil)
 
     // Extended Material Icons :->
     implementation(libs.androidx.material.icons.extended)
