@@ -68,6 +68,13 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    // Google Fonts :->
+    implementation(libs.androidx.ui.text.google.fonts)
+
+    // Navigation :->
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
+
     // Dagger-Hilt :->
     implementation(libs.dagger.hilt)
     ksp(libs.dagger.hilt.compiler)
@@ -80,10 +87,6 @@ dependencies {
     implementation(libs.androidx.animation.core)
     implementation(libs.androidx.foundation)
 
-    // Navigation :->
-    implementation(libs.androidx.navigation.compose)
-    implementation(libs.kotlinx.serialization.json)
-
     // Coil Compose :->
     implementation(libs.coil)
 
@@ -95,9 +98,6 @@ dependencies {
 
     // Splash Screen :->
     implementation(libs.androidx.core.splashscreen)
-
-    // Google fonts :->
-    implementation(libs.androidx.ui.text.google.fonts)
 }
 
 kotlin {
