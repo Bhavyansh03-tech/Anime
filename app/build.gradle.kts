@@ -82,6 +82,14 @@ dependencies {
     ksp(libs.hilt.android.compiler)
     implementation(libs.dagger.hilt.navigation.compose)
 
+    // Jetpack Compose Animation :->
+    implementation(libs.androidx.animation)
+    implementation(libs.androidx.animation.core)
+    implementation(libs.androidx.foundation)
+
+    // Coil Compose :->
+    implementation(libs.coil)
+
     // Extended Material Icons :->
     implementation(libs.androidx.material.icons.extended)
 
