@@ -28,6 +28,8 @@ ksp = "2.0.0-1.0.22"
 datastorePreferences = "1.1.1"
 # SPLASH SCREEN :->
 coreSplashscreen = "1.0.1"
+# GOOGLE FONTS :->
+uiTextGoogleFonts = "1.6.8"
 
 [libraries]
 # EXTENDED MATERIAL ICONS :->
@@ -38,6 +40,8 @@ androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", versi
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
 # COIL COMPOSE :->
 coil = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+# GOOGLE FONTS :->
+androidx-ui-text-google-fonts = { module = "androidx.compose.ui:ui-text-google-fonts", version.ref = "uiTextGoogleFonts" }
 # ANIMATION :->
 androidx-animation = { module = "androidx.compose.animation:animation", version.ref = "animation" }
 androidx-animation-core = { module = "androidx.compose.animation:animation-core", version.ref = "animation" }
