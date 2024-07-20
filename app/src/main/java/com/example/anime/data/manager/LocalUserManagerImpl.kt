@@ -7,7 +7,6 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.preferencesDataStore
 import com.example.anime.domian.manager.LocalUserManager
-import com.example.anime.util.Constants
 import com.example.anime.util.Constants.USER_SETTINGS
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
@@ -34,5 +33,5 @@ private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(na
 
 // Creating a Preference Key :->
 private object PreferencesKeys {
-    val APP_ENTRY = booleanPreferencesKey(name = Constants.APP_ENTRY)
+    val APP_ENTRY = booleanPreferencesKey(name = "app_entry")
 }

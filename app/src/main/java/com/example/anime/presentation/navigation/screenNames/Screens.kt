@@ -8,5 +8,6 @@ sealed class Screens {
     @Serializable object OnboardingScreen
     @Serializable data object AppStartNavigation : Screens()
     @Serializable data object HomeNavigator : Screens()
+    @Serializable data class AnimeScreen(val id:String, val coverImage: String)
 
 }

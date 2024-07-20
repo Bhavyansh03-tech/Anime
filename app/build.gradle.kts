@@ -68,13 +68,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    // Google Fonts :->
-    implementation(libs.androidx.ui.text.google.fonts)
-
-    // Navigation :->
-    implementation(libs.androidx.navigation.compose)
-    implementation(libs.kotlinx.serialization.json)
-
     // Dagger-Hilt :->
     implementation(libs.dagger.hilt)
     ksp(libs.dagger.hilt.compiler)
@@ -82,13 +75,32 @@ dependencies {
     ksp(libs.hilt.android.compiler)
     implementation(libs.dagger.hilt.navigation.compose)
 
+    // HTTP Client + Utilities
+    implementation(libs.com.squareup.retrofit2.retrofit)
+    implementation(libs.converter.scalars)
+    implementation(platform(libs.okhttp.bom))
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+
+    // Moshi
+    implementation(libs.converter.moshi)
+    implementation(libs.moshi.kotlin)
+    implementation(libs.sandwich)
+
     // Jetpack Compose Animation :->
     implementation(libs.androidx.animation)
     implementation(libs.androidx.animation.core)
     implementation(libs.androidx.foundation)
 
+    // Navigation :->
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
+
     // Coil Compose :->
     implementation(libs.coil)
+
+    // Google Fonts :->
+    implementation(libs.androidx.ui.text.google.fonts)
 
     // Extended Material Icons :->
     implementation(libs.androidx.material.icons.extended)
