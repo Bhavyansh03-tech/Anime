@@ -75,6 +75,18 @@ dependencies {
     ksp(libs.hilt.android.compiler)
     implementation(libs.dagger.hilt.navigation.compose)
 
+    // HTTP Client + Utilities
+    implementation(libs.com.squareup.retrofit2.retrofit)
+    implementation(libs.converter.scalars)
+    implementation(platform(libs.okhttp.bom))
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+
+    // Moshi
+    implementation(libs.converter.moshi)
+    implementation(libs.moshi.kotlin)
+    implementation(libs.sandwich)
+
     // Jetpack Compose Animation :->
     implementation(libs.androidx.animation)
     implementation(libs.androidx.animation.core)
@@ -87,6 +99,9 @@ dependencies {
     // Coil Compose :->
     implementation(libs.coil)
 
+    // Google Fonts :->
+    implementation(libs.androidx.ui.text.google.fonts)
+
     // Extended Material Icons :->
     implementation(libs.androidx.material.icons.extended)
 
@@ -95,9 +110,6 @@ dependencies {
 
     // Splash Screen :->
     implementation(libs.androidx.core.splashscreen)
-
-    // Google fonts :->
-    implementation(libs.androidx.ui.text.google.fonts)
 }
 
 kotlin {
