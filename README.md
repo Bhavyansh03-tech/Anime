@@ -19,8 +19,17 @@ This is an Android application that fetches and displays trending anime informat
 - kotlinx.serialization for navigation
 
 ## Screenshots
+### Dark Mode :
+<div style="display: flex; justify-content: center; align-items: center;">
+    <img src="https://github.com/user-attachments/assets/3a59f7f4-39e0-4da4-8239-71aea389eb71" alt="First Screenshot" style="width: 200px; height: auto; margin-right: 10px;">
+    <img src="https://github.com/user-attachments/assets/d08acb33-87b1-47f8-b271-a14de9e0392e" alt="Second Screenshot" style="width: 200px; height: auto;">
+</div>
 
-*Include some screenshots of your app here*
+### Light Mode :
+<div style="display: flex; justify-content: center; align-items: center;">
+    <img src="https://github.com/user-attachments/assets/f16a180a-2b9b-4c75-8913-7de66c2e469e" alt="First Screenshot" style="width: 200px; height: auto; margin-right: 10px;">
+    <img src="https://github.com/user-attachments/assets/77c29526-e106-4104-a1f8-b84c888c69cb" alt="Second Screenshot" style="width: 200px; height: auto;">
+</div>
 
 ## Getting Started
 
