@@ -124,9 +124,6 @@ fun NavGraph(
                 startDestination = Screens.HomeScreen
             ) {
                 composable<Screens.HomeScreen> {
-//                    Box(modifier = Modifier.fillMaxSize()){
-//                        Text(text = "Home World", style = MaterialTheme.typography.displayLarge.copy(fontWeight = FontWeight.Bold))
-//                    }
                     TrendingAnimeListScreen(
                         onAnimeClick = { coverImage, id ->
                             navController.navigate(
