@@ -83,6 +83,7 @@ fun SharedTransitionScope.AnimeCard(
                     // Rating Text :->
                     Text(
                         text = anime.attributes.averageRating.toString(),
+                        style = MaterialTheme.typography.titleSmall,
                         color = MaterialTheme.colorScheme.onTertiaryContainer
                     )
                 }
@@ -90,7 +91,7 @@ fun SharedTransitionScope.AnimeCard(
                 // Title
                 Text(
                     text = anime.attributes.canonicalTitle.toString(),
-                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
+                    style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
                     color = MaterialTheme.colorScheme.onSurface
                 )
 

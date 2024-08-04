@@ -1,15 +1,14 @@
 package com.example.anime.presentation.viewModel
 
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
+import android.util.Log
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.anime.domian.useCases.AppEntryUseCases
 import com.example.anime.presentation.navigation.screenNames.Screens
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
@@ -20,18 +19,19 @@ class MainViewModel @Inject constructor(
     private val appEntryUseCases: AppEntryUseCases
 ) : ViewModel() {
 
-    var splashCondition by mutableStateOf(true)
-        private set
+    private val _splashCondition = MutableStateFlow(true)
+    val splashCondition: StateFlow<Boolean> = _splashCondition
 
-    var startDestination by mutableStateOf<Screens>(Screens.AppStartNavigation)
-        private set
+    private val _startDestination = MutableStateFlow<Screens?>(null)
+    val startDestination: StateFlow<Screens?> = _startDestination
 
     init {
-        CoroutineScope(Dispatchers.IO).launch {
+        viewModelScope.launch {
             appEntryUseCases.readAppEntry().onEach { shouldStartFromHomeScreen ->
-                startDestination = if (shouldStartFromHomeScreen) Screens.HomeNavigator else Screens.AppStartNavigation
-                delay(300)
-                splashCondition = false
+                _startDestination.value = if (shouldStartFromHomeScreen) Screens.HomeNavigator else Screens.AppStartNavigation
+                Log.d("MainViewModel", "Start destination: ${_startDestination.value}")
+                delay(100)
+                _splashCondition.value = false
             }.launchIn(this)
         }
     }
